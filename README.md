@@ -1,22 +1,47 @@
-# Subscriptions-Twitch-to-OBS
-When you subscribe to a twich channel in the obs displays the nicknames of users
+🎮 Twitch & OBS Integration Bot
+Easily display Twitch subscription statistics in OBS with this interactive bot!
+Integrate your Twitch channel with OBS seamlessly and enhance your streaming experience.
 
+🔧 Installation Guide
+Install OBS WebSocket Plugin:
 
-First you need to install the plugin on obs (OBS WebSocket Plugin) - https://github.com/obsproject/obs-websocket/releases. 
-I recommend to download version 4.9.1, it is more stable than newer ones. There are two types of installation, windows-installer.exe - automatic installation and windows.zip - manual installation
-Open OBS - Tools - WebSockets Server Settings - be sure to set a password. 
-Set any port (standard 4444)
-Create a source text (FreeType 2) under the obligatory name ‘SubText’ leave the text empty, do not enter anything there. Then put on the Scrolling filter 
-After that, open the exe file.
-OBS host is localhost
-If OBS is running on another device in local network or via internet, you will need to specify IP address of this device instead of localhost.
-write localhost if you run the bot on one device, if you use vpn specify vpn-address.
-OBS port - in our case 4444 (which you set in the obs plugin).
-Twitch Access Token: it can be found at (https://dev.twitch.tv/console) I think you know it better than I do.
-Twitch Channel Name - this is the nickname of the Twitch.
-(If you want to test you can use https://twitchtokengenerator.com/ there you can create a Twitch token, but it is better to use your own, I think for obvious reasons).
-That's it, the script should work. It displays the top 15 people who gave sabki, this number can be easily changed. The rest is to be customised in the OBS.
-You can test the script with the commands 
-!test_sub - adds a test sub and displays it in OBS.
-!test_multiple_subs 10 - adds 10 test subs.
-These commands should be entered on Twitch
+Download it from OBS WebSocket Plugin Releases.
+For stability, I recommend version 4.9.1.
+Choose your installation type:
+windows-installer.exe (Automatic installation)
+windows.zip (Manual installation)
+Configure OBS:
+
+Open OBS → Tools → WebSockets Server Settings:
+Set a password for security.
+Use any port (default: 4444).
+Create a Text Source in OBS:
+
+Add a text source (FreeType 2) with the name SubText.
+Leave the text field empty.
+Apply the Scrolling filter for smooth animation.
+Set Up the Bot:
+
+Run the .exe file (bot application).
+Input the following details:
+OBS Host: Use localhost if the bot runs on the same machine as OBS.
+For a different device, use its local network IP address.
+If using VPN, enter your VPN address.
+OBS Port: Match the port set in OBS (default: 4444).
+Twitch Access Token:
+Generate it from Twitch Developer Console.
+For testing, you can also use Twitch Token Generator (not recommended for production).
+Twitch Channel Name: Your Twitch username.
+🎮 Features
+Displays the top 15 subscribers (can be adjusted in code).
+Real-time updates on Twitch events like subscriptions.
+Customizable text design in OBS for a professional stream overlay.
+Test commands to simulate Twitch events for easy debugging.
+🛠️ Commands
+!test_sub: Add a single test subscription and display it in OBS.
+!test_multiple_subs <number>: Add multiple test subscriptions (e.g., !test_multiple_subs 10).
+💡 Additional Notes
+The bot works with OBS WebSocket Plugin version 4.9.1 for best compatibility.
+Ensure OBS is running before starting the bot.
+Customize the OBS text source design to match your stream's branding.
+Feel free to download, modify, and share the script! If you use this project, kindly credit me. 😊
